@@ -8,7 +8,7 @@ và được sở hữu bởi Cisco từ năm 2013.
 
 # Mô hình kiến trúc của Snort
 
-![kien-truc-snort](../Images/kien-truc-snort.jpg)
+![kien-truc-snort](/Images/kien-truc-snort.jpg)
 
 Trong mô hình kiến trúc trên, hệ thống Snort được chia thành 4 phần:
 
@@ -21,7 +21,7 @@ Trong mô hình kiến trúc trên, hệ thống Snort được chia thành 4 ph
 
 Snort sử dụng thư viện pcap để bắt mọi gói tin trên mạng lưu thông qua hệ thống. Gói tin sau khi được giải mã sẽ đưa vào Module tiền xử lý.
 
-![the-ipv6-snort-plugin-at-deepsec-2014-20-638](../Images/the-ipv6-snort-plugin-at-deepsec-2014-20-638.jpg)
+![the-ipv6-snort-plugin-at-deepsec-2014-20-638](/Images/the-ipv6-snort-plugin-at-deepsec-2014-20-638.jpg)
 
 ## Module Preprocessors
 
