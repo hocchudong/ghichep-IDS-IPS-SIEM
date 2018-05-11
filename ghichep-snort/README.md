@@ -12,7 +12,7 @@ hợp các kết quả đầu ra từ nhiều nguồn và sử dụng các kỹ 
 IPS (Intrusion Prevention System - hệ thống ngăn chặn xâm nhập) có các chức năng của một IDS, ngoài ra bổ sung thêm khả năng ngăn ngừa 
 các hoạt động xâm nhập không mong muốn.
 
-![IDS-IPS-graphic-e1507560087608](/Images/IDS-IPS-graphic-e1507560087608.jpg)
+![IDS-IPS-graphic-e1507560087608](../Images/IDS-IPS-graphic-e1507560087608.jpg)
 
 # Phân loại IDS theo phạm vi giám sát
 
@@ -23,14 +23,14 @@ Dựa vào phạm vi giám sát, IDS được chia thành 02 loại
 Là những IDS giám sát trên toàn bộ mạng. Nguồn thông tin chủ yếu của NIDS là các gói dữ liệu đang lưu thông trên mạng. NIDS thường 
 được lắp đặt tại ngõ vào của mạng (Inline), có thể đứng trước hoặc  sau firewall. Như hình dưới:
 
-![1_0](/Images/1_0.png)
+![1_0](../Images/1_0.png)
 
 ## Host-based IDS (HIDS)
 
 Là những IDS giám sát hoạt động của từng máy tính riêng biệt. Do vậy, nguồn thông tin chủ yếu của HIDS ngoài lưu lượng đến và đi trên máy chủ còn có hệ 
 thống dữ liệu system log và system audit.
 
-![2](/Images/2.png)
+![2](../Images/2.png)
 
 # Tham khảo 
 
