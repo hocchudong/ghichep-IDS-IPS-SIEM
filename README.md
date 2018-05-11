@@ -2,9 +2,9 @@
 
 ## ghichep-snort
 
-- [Ly thuyet ve Snort](/ghichep-snort/Ly thuyet ve Snort.md)
+- [Ly thuyet ve Snort](https://github.com/TrongTan124/ghichep-IDS-IPS-SIEM/blob/master/ghichep-snort/Ly%20thuyet%20ve%20Snort.md)
 
-- [Cai dat Snort](/ghichep-snort/Cai dat Snort.md)
+- [Cai dat Snort](https://github.com/TrongTan124/ghichep-IDS-IPS-SIEM/blob/master/ghichep-snort/Cai%20dat%20Snort.md)
 
 ##  ghichep-suricata
 
