@@ -7,6 +7,7 @@ Tài liệu về các bước cài đặt Cowrie
 - Tham khảo: 
 
   - (1) https://qiita.com/pypypyo14/items/f399366b34b8dfcb7aa1
+	
 	- (2) https://leifdreizler.com/2016/Installing-Cowrie/
 
 ### 1.1 Bước chuẩn bị
@@ -71,6 +72,8 @@ Tài liệu về các bước cài đặt Cowrie
 	```sh
 	sudo firewall-cmd --list-services --zone=public --permanent
 	```
+	
+	- Kết quả của các lệnh trên: http://prntscr.com/jkkdot
 
 - Ý tưởng của cowrie là: 
   - Thay đổi port ssh mặc định (port 22) sang port mới .
@@ -81,10 +84,20 @@ Tài liệu về các bước cài đặt Cowrie
 
 	```sh
 	sed -i 's/#Port 22/Port 2255/g' /etc/ssh/sshd_config
+	```
+	
+- Sao chép file cấu hình ssh trong firewalld
 
-	systemctl restart sshd
+	```sh
+	sudo cp -ip /usr/lib/firewalld/services/ssh.xml /etc/firewalld/services/ssh.xml
 	```
 
+- Sửa dòng <port protocol="tcp" port="22"/> thành dòng <port protocol="tcp" port="2255"/> để cho phép ssh vào port 2255 ở file `/etc/firewalld/services/ssh.xml` bằng lệnh dưới.
+
+	```sh
+	sed -i 's/port="22"/port="2255"/g' /etc/firewalld/services/ssh.xml
+	```
+	
 - Mở mở rule 22 cho phép bên ngoài có thể sử dụng port 22 (lúc này port 22 đã được forward (bước dưới) sang port mà cowrie xử lý - ví dụ này là port 2222)
 
 	```sh
@@ -109,29 +122,24 @@ Tài liệu về các bước cài đặt Cowrie
 	sudo firewall-cmd --reload
 	```
 
-- Sao chép file cấu hình ssh trong firewalld
-
-	```sh
-	sudo cp -ip /usr/lib/firewalld/services/ssh.xml /etc/firewalld/services/ssh.xml
-	```
-
-- Sửa dòng <port protocol="tcp" port="22"/> thành dòng <port protocol="tcp" port="2255"/> để cho phép ssh vào port 2255 ở file `/etc/firewalld/services/ssh.xml` bằng lệnh dưới.
-
-	```sh
-	sed -i 's/port="22"/port="2255"/g' /etc/firewalld/services/ssh.xml
-	```
-
 - Kiểm tra lại các rule đã khai báo trong firewalld
 
 ```sh
 sudo firewall-cmd --list-all --zone=public --permanent
 ```
 
-  - Kết quả: 
+  - Kết quả: http://prntscr.com/jkkjah
+	
+	
+- Khởi động lại SSH
 	
 	```sh
-	
+	systemctl restart sshd
 	```
+
+- Nếu khởi động lại ssh báo lỗi thì thực hiện khởi động lại OS và đăng nhập ssh với port 2255.
+
+	
 	
 #### 1.3.2. Thực hiện cài đặt cowrie
 
