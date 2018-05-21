@@ -138,7 +138,6 @@ sudo firewall-cmd --list-all --zone=public --permanent
 	```
 
 - Nếu khởi động lại ssh báo lỗi thì thực hiện khởi động lại OS và đăng nhập ssh với port 2255.
-
 	
 	
 #### 1.3.2. Thực hiện cài đặt cowrie
@@ -164,7 +163,7 @@ sudo firewall-cmd --list-all --zone=public --permanent
 
 	yum install -y python-devel python-setuptools python-virtualenv
 
-	easy_install -y pip
+	easy_install pip
 	```
 
 - Chuyển sang user `Cowrie` và tải bộ cài của Cowrie
@@ -198,10 +197,26 @@ sudo firewall-cmd --list-all --zone=public --permanent
 	deactivate
 	```
 
-- Khởi động cowrie
+- Khởi động cowrie bằng một trong hai tùy chọn dưới
 
 	```sh
 	./bin/cowrie start
+	
+	(Nếu đứng tại thư mục chứa mã nguồn của cowie)
+	```
+	
+	hoặc
+	
+	```sh
+	/home/Cowrie/cowrie/bin/cowrie start
+	```
+	
+Nếu thành công kết quả sẽ báo như sau: 
+
+	```sh
+	[Cowrie@srv01cowrie cowrie]$ /home/Cowrie/cowrie/bin/cowrie start
+	Using default Python virtual environment "/home/Cowrie/cowrie/cowrie-env"
+	Starting cowrie: [twistd   --umask 0022 --pidfile var/run/cowrie.pid --logger cowrie.python.logfile.logger cowrie ]...
 	```
 
 
@@ -210,11 +225,17 @@ sudo firewall-cmd --list-all --zone=public --permanent
 - Đứng trên máy cowrie vừa cài, thực hiện quan sát theo thời gian thực file log.
 
 
-```sh
-
-```
+	```sh
+	tailf  /home/Cowrie/cowrie/log/cowrie.log
+	```
 
 - Đứng trên một máy khác hoặc dùng chương trình ssh và thử ssh với port 22, sau đó quan sát log theo bước trên.
+
+ - Thử đăng nhập sai: http://prntscr.com/jkkuko
+ 
+ - Thử đăng nhập đúng: http://prntscr.com/jkkt6t . Nhưng lưu ý, lúc này attacker đăng nhập đúng với một tài khoản root và nằm trên host khác (host do cowrie giả lập ;) ). Và lúc này attacker sẽ thực hiện các thao tác lệnh thì cowie sẽ lưu lại hết: http://prntscr.com/jkktwq
+ 
+ 
 
 
 
