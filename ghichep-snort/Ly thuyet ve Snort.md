@@ -8,9 +8,9 @@ và được sở hữu bởi Cisco từ năm 2013.
 
 # Mô hình kiến trúc của Snort
 
-![kien-truc-snort](/Images/kien-truc-snort.jpg)
+![kien-truc-snort](../Images/kien-truc-snort.jpg)
 
-![snort-architecture](/Images/snort-architecture.png)
+![snort-architecture](../Images/snort-architecture.png)
 
 Trong mô hình kiến trúc trên, hệ thống Snort được chia thành 4 phần:
 
@@ -23,7 +23,7 @@ Trong mô hình kiến trúc trên, hệ thống Snort được chia thành 4 ph
 
 Snort sử dụng thư viện pcap để bắt mọi gói tin trên mạng lưu thông qua hệ thống. Gói tin sau khi được giải mã sẽ đưa vào Module tiền xử lý.
 
-![the-ipv6-snort-plugin-at-deepsec-2014-20-638](/Images/the-ipv6-snort-plugin-at-deepsec-2014-20-638.jpg)
+![the-ipv6-snort-plugin-at-deepsec-2014-20-638](../Images/the-ipv6-snort-plugin-at-deepsec-2014-20-638.jpg)
 
 ## Module Preprocessors
 
@@ -69,7 +69,7 @@ Các file log là các file dữ liệu có thể ghi dưới nhiều định d�
 
 # Bộ luật của Snort
 
-![rule_snort](/Images/rule_snort.png)
+![rule_snort]../Images/rule_snort.png)
 
 Module detection engine sử dụng các bộ luật để nhận dạng dữ liệu. ví dụ một luật
 ```sh

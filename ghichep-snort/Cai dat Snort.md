@@ -5,14 +5,14 @@ tới Snort.
 
 **Lưu ý**: Dữ liệu hệ thống của bạn lớn thì phải thiết kế băng thông cho máy chủ Snort và cấu hình máy chủ cũng phải đủ lớn
 
-![4_snort-ips-4-638_525af_0](/Images/4_snort-ips-4-638_525af_0.jpg)
+![4_snort-ips-4-638_525af_0](../Images/4_snort-ips-4-638_525af_0.jpg)
 
 Nếu bạn muốn sử dụng Snort ở chế độ IPS thì phải thiết lập cho phép Snort đứng trước hoặc sau firewall (Inline). Việc chạy Snort như IPS thì các 
 rule sẽ có thêm action: drop, reject, sdrop
 
-![maxresdefault](/Images/maxresdefault.jpg)
+![maxresdefault](../Images/maxresdefault.jpg)
 
-![ids-ips-660x330](/Images/ids-ips-660x330.jpg)
+![ids-ips-660x330](../Images/ids-ips-660x330.jpg)
 
 # Cài đặt
 
@@ -43,8 +43,8 @@ network card thực hiện lắp ráp lại packet trước khi chúng được 
 
 Để tắt LRO và GRO ta sử dụng lệnh ethtool vào file cấu hình interface `/etc/network/interfaces`. Thêm 02 dòng sau vào mỗi interface
 ```sh
-post-up ethtool -K eth0 gro off
-post-up ethtool -K eth0 lro off
+post-up ethtool -K $IFACE gro off
+post-up ethtool -K $IFACE lro off
 ```
 Thay thế đúng tên interface của máy bạn và thực hiện khởi động lại interface
 ```sh
@@ -224,7 +224,7 @@ Thực hiện chạy lệnh sau để test
 
 Đứng trên máy khác ping tới interface đang được Snort bắt gói sẽ có log tương tự sau:
 
-![Snort_test_ping](/Images/Snort_test_ping.png)
+![Snort_test_ping](../Images/Snort_test_ping.png)
 
 Tiến hành ping tới IP của eth0 sẽ có log alert được xuất hiện trên màn hình console. Nếu bạn ctrl-c để dừng Snort, các thông tin sẽ lưu vào trong 
 thư mục /var/log/snort với tên snort.log.nnnnnn (số có thể khác).
@@ -527,11 +527,11 @@ service apache2 restart
 
 Tại giao diện website, bạn nhấn vào `Setup page` để thực hiện cấu hình và tối ưu DB
 
-![Snort_BASE](/Images/Snort_BASE.png)
+![Snort_BASE](../Images/Snort_BASE.png)
 
 Tiếp tục chọn vào `Create BASE AG`, sau đó trở về thư mục home. Giao diện như sau
 
-![Snort_BASE_2](/Images/Snort_BASE_2.png)
+![Snort_BASE_2](../Images/Snort_BASE_2.png)
 
 Bạn chọn vào Unique Alerts sẽ hiển thị các gói tin đã được Snort nhận diện và cảnh báo
 
