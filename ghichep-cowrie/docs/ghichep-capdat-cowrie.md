@@ -6,9 +6,9 @@ Tài liệu về các bước cài đặt Cowrie
 
 - Tham khảo: 
 
-  - (1) https://qiita.com/pypypyo14/items/f399366b34b8dfcb7aa1
+  - `(1)`: https://qiita.com/pypypyo14/items/f399366b34b8dfcb7aa1
 	
-	- (2) https://leifdreizler.com/2016/Installing-Cowrie/
+	- `(2)`: https://leifdreizler.com/2016/Installing-Cowrie/
 
 ### 1.1 Bước chuẩn bị
 
