@@ -5,6 +5,7 @@ Tài liệu về các bước cài đặt Cowrie
 ## 1. Cài đặt Cowrie trên CentOS Server 7.4 - 64 bit
 
 - Tham khảo: 
+
   - (1) https://qiita.com/pypypyo14/items/f399366b34b8dfcb7aa1
 	- (2) https://leifdreizler.com/2016/Installing-Cowrie/
 
@@ -19,7 +20,7 @@ Tài liệu về các bước cài đặt Cowrie
 ### 1.1.2. Mô hình & IP Planning
 
 
-### 1.2 Các bước cài đặt
+### 1.2. Các bước cài đặt cơ bản
 
 
 - Đặt hostname
@@ -53,12 +54,13 @@ Tài liệu về các bước cài đặt Cowrie
 
 - Update OS và khởi động lại trước khi cài đặt.
 
-```sh
-yum -y update
-```
+	```sh
+	yum -y update
+	```
 
-### Thực hiện cài đặt
+### 1.3. Bước cài đặt chính
 
+#### 1.3.1. Cấu hình các rule của firewall 
 
 - Kiểm tra firewalld xem có hoạt động hay không và các rule đang mở là gì
 
@@ -131,7 +133,7 @@ sudo firewall-cmd --list-all --zone=public --permanent
 	
 	```
 	
-#### Thực hiện cài đặt cowrie
+#### 1.3.2. Thực hiện cài đặt cowrie
 
 - Tạo user để cài cowrie bởi vì cowrie không dùng tài khoản root để đảm bảo an toàn.
 
@@ -149,12 +151,13 @@ sudo firewall-cmd --list-all --zone=public --permanent
 
 - Cài đặt các gói phần mềm cần thiết
 
-```sh
-yum groupinstall -y "Development Tools"
+	```sh
+	yum groupinstall -y "Development Tools"
 
-yum install -y python-devel python-setuptools python-virtualenv
+	yum install -y python-devel python-setuptools python-virtualenv
 
-easy_install -y pip
+	easy_install -y pip
+	```
 
 - Chuyển sang user `Cowrie` và tải bộ cài của Cowrie
 
@@ -189,12 +192,12 @@ easy_install -y pip
 
 - Khởi động cowrie
 
-	```
+	```sh
 	./bin/cowrie start
 	```
 
 
-### Thực hiện kiểm tra
+#### 1.3.3. Thực hiện kiểm tra
 
 - Đứng trên máy cowrie vừa cài, thực hiện quan sát theo thời gian thực file log.
 
