@@ -211,7 +211,7 @@ sudo firewall-cmd --list-all --zone=public --permanent
 	/home/Cowrie/cowrie/bin/cowrie start
 	```
 	
-Nếu thành công kết quả sẽ báo như sau: 
+- Nếu thành công kết quả sẽ báo như sau: 
 
 	```sh
 	[Cowrie@srv01cowrie cowrie]$ /home/Cowrie/cowrie/bin/cowrie start
