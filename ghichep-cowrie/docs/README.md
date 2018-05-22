@@ -13,6 +13,15 @@ Hình dưới sẽ minh họa ý tưởng của Cowrie
 
 ![Minh họa ý tưởng Cowrie](../images/image1.png)
 
+Giải thích tóm lược về ý tưởng của Cowrie như sau:
+
+- Thực hiện thay đổi port mặc định của SSH sang port mới, trong ảnh trên là từ `22` sang `22222`.
+- Người dùng sử dụng port `22222` để SSH, đây mới là port SSH thực sự sau khi thay đổi.
+- Cấu hình các rule trên iptables hoặc firewalld hoặc ufw để mở các port và protocol cần thiết.
+- Cấu hình forward port `22` sang port `2222` để Cowrie nhận được các traffic khi thực hiện truy cập vào port 22. Attacker sẽ dùng port này để thử ssh/
+- Lý thú của Cowrie là nó đáp trả được các request với port 22 (port mặc định SSH) và trả về cho attacker. Điểm mấu chốt của Cowrie nói riêng và các hệ thống Honeypot nói chung là ở đây. Nó hoàn toàn đánh lừa được các attacker, làm cho chúng tưởng nhầm đây là hệ thống thât.
+- Ngoài việc bắt các log về SSH thông thường, Cowrie còn bắt được được các log khi sử dụng lệnh hoặc thao tác ... khi attacker thực hiện.
+
 
 ### Danh mục các tài liệu và ghi chép về Cowrie
 
