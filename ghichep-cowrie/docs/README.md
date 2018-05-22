@@ -11,7 +11,7 @@
 
 Hình dưới sẽ minh họa ý tưởng của Cowrie
 
-![Minh họa ý tưởng Cowrie](./images/image1.png)
+![Minh họa ý tưởng Cowrie](../images/image1.png)
 
 
 ### Danh mục các tài liệu và ghi chép về Cowrie
@@ -20,7 +20,7 @@ Hình dưới sẽ minh họa ý tưởng của Cowrie
 
 - Mô tả về kiến trúc của Cowrie
 
-- [Hướng dẫn cài đặt Cowrie trong môi trường LAB] (https://github.com/congto/ghichep-IDS-IPS-SIEM/blob/master/ghichep-cowrie/docs/ghichep-capdat-cowrie.md)
+- [Hướng dẫn cài đặt Cowrie trong môi trường LAB](./ghichep-capdat-cowrie.md)
 
 - Các lưu ý về Cowrie
 
