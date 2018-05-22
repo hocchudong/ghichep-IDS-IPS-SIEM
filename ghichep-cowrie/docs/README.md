@@ -14,3 +14,17 @@ Hình dưới sẽ minh họa ý tưởng của Cowrie
 [Minh họa ý tưởng Cowrie](./images/image1.png)
 
 
+#### Danh mục các tài liệu và ghi chép về Cowrie
+
+- Mô tả tóm lược về Cowrie
+
+- Mô tả về kiến trúc của Cowrie
+
+- Hướng dẫn cài đặt Cowrie trong môi trường LAB
+
+- Các lưu ý về Cowrie
+
+
+
+
+
