@@ -1,6 +1,6 @@
-### Tài liệu ghi chép về Cowrie
+## Tài liệu ghi chép về Cowrie
 
-#### Mô tả tóm lược về Cowrie
+### Mô tả tóm lược về Cowrie
 
 - Honeypot là giải pháp được xây dựng với ý tưởng để đánh lạc hướng hoặc dựng lên các hệ thống bẫy các attacker xâm nhập vào hệ thống. Từ việc bẫy hoặc đánh lạc hướng này, ta sẽ thu thập các hành vi và cách thức tấn công của attacker và từ đó có phương pháp phòng chống cho hệ thống thật. Ngoài ra, các hệ thống Honeypot cũng phục vụ việc điều tra các cuộc tấn công hoặc cách thức tấn công trên Internet. 
 - Có rất nhiều giải pháp nguồn mở cho ý tưởng Honeypot này, Cowrie là một trong số sản phẩm đó.
@@ -11,16 +11,16 @@
 
 Hình dưới sẽ minh họa ý tưởng của Cowrie
 
-[Minh họa ý tưởng Cowrie](./images/image1.png)
+![Minh họa ý tưởng Cowrie](./images/image1.png)
 
 
-#### Danh mục các tài liệu và ghi chép về Cowrie
+### Danh mục các tài liệu và ghi chép về Cowrie
 
 - Mô tả tóm lược về Cowrie
 
 - Mô tả về kiến trúc của Cowrie
 
-- Hướng dẫn cài đặt Cowrie trong môi trường LAB
+- [Hướng dẫn cài đặt Cowrie trong môi trường LAB] (https://github.com/congto/ghichep-IDS-IPS-SIEM/blob/master/ghichep-cowrie/docs/ghichep-capdat-cowrie.md)
 
 - Các lưu ý về Cowrie
 
